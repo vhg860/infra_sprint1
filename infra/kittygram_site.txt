@@ -1,4 +1,4 @@
-IP: I62.84.123.210;
+IP: 62.84.123.210;
 name_taski: https://realtok.ddns.net/;
 name_kittygram: https://realtokkitty.ddns.net/;
 login: admin;

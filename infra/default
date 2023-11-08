@@ -1,6 +1,8 @@
 server {
         server_name 62.84.123.210 realtokkitty.ddns.net;
 
+        server_tokens off;
+
         location /api/ {
             proxy_pass http://127.0.0.1:8080;
             proxy_set_header Host $host;
@@ -34,6 +36,8 @@ server {
 server {
     server_name 62.84.123.210 realtok.ddns.net;
 
+    server_tokens off;
+
     location /api/ {
         proxy_pass http://127.0.0.1:8000;
     }
@@ -61,23 +65,17 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-
     listen 80;
     server_name 62.84.123.210 realtok.ddns.net;
     return 404; # managed by Certbot
-
-
 }
+
 server {
     if ($host = realtokkitty.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-        server_name 62.84.123.210 realtokkitty.ddns.net;
+    server_name 62.84.123.210 realtokkitty.ddns.net;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
